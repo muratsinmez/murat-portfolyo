@@ -29,7 +29,7 @@ const Hero = () => {
 
   const stats = [
     { value: '5+',  label: 'Yıl Deneyim'          },
-    { value: '4+',  label: 'Tamamlanan Proje'       },
+    { value: '21+',  label: 'Tamamlanan Proje'       },
     { value: '%70', label: 'AI ile Verimlilik Artışı' },
   ];
 

@@ -97,7 +97,7 @@ const About = () => {
               display: 'inline-block', fontFamily: "'Space Mono', monospace",
               fontSize: '0.73rem', color: '#38bdf8',
               letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 12,
-            }}>// about.me</span>
+            }}></span>
 
             <h2 style={{
               fontFamily: "'Space Mono', monospace",
@@ -108,8 +108,9 @@ const About = () => {
             }}>Hakkımda</h2>
 
             <p style={{ color: '#64748b', fontSize: '1rem', maxWidth: 580, margin: '0 auto', lineHeight: 1.8 }}>
-              5+ yıllık sistem altyapı ve operasyon deneyimine sahip, yazılım geliştirme kökenli bir mühendisim.
-              Teknik ekipler ile son kullanıcı arasında köprü kurarak operasyonel süreçleri hızlandırırım.
+              5 yılı aşkın sistem altyapı ve operasyonel deneyimimi modern yazılım mimarileriyle birleştiren bir Full Stack Developer'ım. 
+              Kariyerim boyunca teknik mükemmeliyet ile iş hedefleri arasındaki dengeyi kurmaya odaklandım. Hukukmatik gibi kapsamlı CRM sistemlerinde ürün mimarisi ve teknik liderlik süreçlerini yöneterek, 
+              karmaşık iş akışlarını temiz kod ve kullanıcı dostu arayüzlerle dijitalleştiriyorum. Problem çözme yeteneğimi hem kod başında hem de sistem mimarisi tarafında kullanarak uçtan uca değer yaratıyorum.
             </p>
           </div>
 
@@ -164,8 +165,12 @@ const About = () => {
                 <span style={{ fontSize: '2rem' }}>🏆</span>
                 <div>
                   <div style={{ color: '#fb923c', fontWeight: 700, fontSize: '0.8rem', marginBottom: 4 }}>SERTİFİKA</div>
+                  <div style={{ color: '#e2e8f0', fontWeight: 600 }}>Java Programlama</div>
+                  <div style={{ color: '#64748b', fontSize: '0.82rem', marginTop: 2 }}>BTK Akademi  </div>
                   <div style={{ color: '#e2e8f0', fontWeight: 600 }}>İleri Seviye Java</div>
-                  <div style={{ color: '#64748b', fontSize: '0.82rem', marginTop: 2 }}>BTK Akademi · İngilizce B1</div>
+                  <div style={{ color: '#64748b', fontSize: '0.82rem', marginTop: 2 }}>BTK Akademi · İngilizce</div>
+                  <div style={{ color: '#e2e8f0', fontWeight: 600 }}>Python</div>
+                  <div style={{ color: '#64748b', fontSize: '0.82rem', marginTop: 2 }}>BTK Akademi </div>
                 </div>
               </div>
             </div>

@@ -68,7 +68,7 @@ const Contact = () => {
               display: 'inline-block', fontFamily: "'Space Mono', monospace",
               fontSize: '0.73rem', color: '#38bdf8',
               letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 12,
-            }}>// contact.me</span>
+            }}></span>
 
             <h2 style={{
               fontFamily: "'Space Mono', monospace",

@@ -124,6 +124,16 @@ const Projects = () => {
       metrics: ['Kurumsal Düzey', 'Role-Based Auth'],
       link: '#',
     },
+    {
+      title: 'Hastane Yönetim Sistemi',
+      subtitle: 'Spring Boot Application / Personal Project',
+      description: 'Modern bir React + Spring Boot tabanlı hastane yönetim uygulaması. Hasta kayıtları, randevu yönetimi ve doktor atamalarını içeren uçtan uca bir sistem.',
+      icon: '🧑‍💼', color: '#b81414',
+      tags: ['Java 17+', 'Spring Boot 3', "Spring Data JPA",'Spring Security', 'JWT', 'REST API', 'MySQL'],
+      metrics: ['Role-Based Auth'],
+      link: '#',
+    },
+    
   ];
 
   return (
@@ -148,7 +158,7 @@ const Projects = () => {
               display: 'inline-block', fontFamily: "'Space Mono', monospace",
               fontSize: '0.73rem', color: '#34d399',
               letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 12,
-            }}>// my_projects</span>
+            }}></span>
 
             <h2 style={{
               fontFamily: "'Space Mono', monospace",
