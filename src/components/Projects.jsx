@@ -62,7 +62,9 @@ const ProjectCard = ({ title, subtitle, description, tags, metrics, link, color,
       </div>
 
       {/* Description */}
-      <p style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: 1.72, margin: 0 }}>{description}</p>
+      <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: 1.72, margin: 0 }}>
+        {description}
+      </div>
 
       {/* Metrics */}
       {metrics && (
@@ -89,12 +91,35 @@ const ProjectCard = ({ title, subtitle, description, tags, metrics, link, color,
 const Projects = () => {
   const projects = [
     {
-      title: 'Hukukmatik',
-      subtitle: 'Multi-Tenant Legal SaaS CRM',
-      description: 'Hukuk bürolarının icra takibi, borçlu yönetimi ve finansal operasyonlarını dijitalleştiren bulut tabanlı CRM. Yerel sistemi ölçeklenebilir Multi-Tenant mimarisine taşıdım.',
+      title: 'Hukukmatik CRM',
+      subtitle: 'Yazılım Lideri / Multi-Tenant SaaS',
+      description: (
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1.2rem', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <li><strong>Yapay Zeka Veri Hattı:</strong> UYAP evraklarını OCR ve NLP algoritmalarıyla analiz edip, saniyeler içinde otonom ayrıştıran sistem.</li>
+          <li><strong>Modern Frontend:</strong> React.js ve Tailwind ile SPA mimarisi, milisaniye hızında tepki veren jilet gibi UI/UX.</li>
+          <li><strong>Güçlü Backend & Finans Motoru:</strong> Python asenkron mimarisi üzerine kurulu, Server-Side Validation destekli kurşungeçirmez faiz/kapak hesabı motoru.</li>
+          <li><strong>Zero-Trust Güvenlik:</strong> Supabase (PostgreSQL) Row Level Security (RLS) ve JWT ile banka standartlarında Multi-Tenant veri izolasyonu.</li>
+        </ul>
+      ),
       icon: '⚖️', color: '#38bdf8',
-      tags: ['React', 'Python', 'FastAPI', 'Supabase', 'PostgreSQL', 'Multi-Tenant'],
-      metrics: ['Production Level', 'SaaS CRM'],
+      tags: ['React', 'Python', 'Supabase', 'PostgreSQL', 'NLP', 'OCR', 'RLS'],
+      metrics: ['Production Level', 'Amiral Gemisi Proje'],
+      link: '#',
+    },
+    {
+      title: 'Çorba Plus',
+      subtitle: 'E-İmza Otomasyon & Çoklayıcı Mimarisi',
+      description: (
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1.2rem', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <li><strong>Otonom Çoklu İmza Motoru:</strong> Yüzlerce evrakı tek bir PIN onayıyla asenkron olarak imzalayan, saatler süren manuel operasyonu saniyelere indiren batch-processing altyapısı.</li>
+          <li><strong>Donanım Seviyesi Entegrasyon:</strong> USB e-imza akıllı kartlarıyla (Token) doğrudan haberleşen, PKCS#11 kriptografi standartlarına tam uyumlu güvenli iletişim katmanı.</li>
+          <li><strong>Kesintisiz Web-Masaüstü Köprüsü:</strong> Web tabanlı sistemler ile senkronize çalışan, WebSocket üzerinden gerçek zamanlı işlem durumu aktaran hibrit mimari.</li>
+          <li><strong>Hata Toleranslı İşlem Hattı:</strong> Ağ veya donanım kesintilerinde veri kaybını önleyen (self-healing), hatalı evrakları izole edip otomatik yeniden kuyruğa alan resilient kuyruk yönetimi.</li>
+        </ul>
+      ),
+      icon: '✍️', color: '#f43f5e',
+      tags: ['Python', 'Cryptography', 'PKCS#11', 'WebSocket', 'E-İmza', 'Automation'],
+      metrics: ['Production Level', 'Manuel Yükü %90 Azaltır'],
       link: '#',
     },
     {
@@ -133,7 +158,6 @@ const Projects = () => {
       metrics: ['Role-Based Auth'],
       link: '#',
     },
-    
   ];
 
   return (
