@@ -33,7 +33,7 @@ const Hero = () => {
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
         @keyframes fadeUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
         @keyframes pulseAmber{ 0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.5)} 50%{box-shadow:0 0 0 8px rgba(245,158,11,0)} }
-        @keyframes gridFlow { from{background-position:0 0} to{background-position:40px 40px} }
+        
         @keyframes spinRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
         @keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0} }
 
@@ -79,8 +79,8 @@ const Hero = () => {
         {/* Grid bg */}
         <div style={{
           position:'absolute', inset:0, pointerEvents:'none',
-          backgroundImage:`linear-gradient(rgba(245,158,11,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.05) 1px,transparent 1px)`,
-          backgroundSize:'40px 40px', animation:'gridFlow 10s linear infinite',
+          backgroundImage:`radial-gradient(rgba(245,158,11,0.18) 1px, transparent 1px)`,
+          backgroundSize:'28px 28px',
         }} />
         {/* Glow blobs */}
         <div style={{ position:'absolute', top:'10%', left:'5%', width:420, height:420, background:'radial-gradient(circle,rgba(245,158,11,.1) 0%,transparent 70%)', borderRadius:'50%', filter:'blur(50px)', pointerEvents:'none' }} />

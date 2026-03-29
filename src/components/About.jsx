@@ -83,8 +83,8 @@ const About = () => {
         {/* subtle amber grid */}
         <div style={{
           position:'absolute', inset:0, pointerEvents:'none',
-          backgroundImage:`linear-gradient(rgba(245,158,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.04) 1px,transparent 1px)`,
-          backgroundSize:'40px 40px',
+          backgroundImage:`radial-gradient(rgba(245,158,11,0.12) 1px, transparent 1px)`,
+          backgroundSize:'28px 28px',
         }} />
         {/* glow */}
         <div style={{ position:'absolute', top:'20%', right:'10%', width:350, height:350, background:'radial-gradient(circle,rgba(245,158,11,.08) 0%,transparent 70%)', borderRadius:'50%', filter:'blur(50px)', pointerEvents:'none' }} />
@@ -94,10 +94,10 @@ const About = () => {
           {/* Header */}
           <div style={{ textAlign:'center', marginBottom:56 }}>
             <span style={{ display:'inline-block', fontFamily:"'Space Mono',monospace", fontSize:'.73rem', color:'#f59e0b', letterSpacing:'.16em', textTransform:'uppercase', marginBottom:12 }}>
-              // about.me
+              
             </span>
             <h2 style={{ fontFamily:"'Space Mono',monospace", fontSize:'clamp(1.7rem,4vw,2.8rem)', fontWeight:700, color:'#f1f5f9', marginBottom:18 }}>
-              Hakkımda <span style={{ color:'#f59e0b' }}>_</span>
+              Hakkımda <span style={{ color:'#f59e0b' }}></span>
             </h2>
             <p style={{ color:'#a89278', fontSize:'1rem', maxWidth:580, margin:'0 auto', lineHeight:1.8 }}>
               5 yılı aşkın sistem altyapı ve operasyonel deneyimimi modern yazılım mimarileriyle birleştiren bir Full Stack Developer'ım.

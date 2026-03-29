@@ -147,16 +147,16 @@ const Projects = () => {
         position:'relative', zIndex:2,
       }}>
         {/* amber grid subtle */}
-        <div style={{ position:'absolute', inset:0, pointerEvents:'none', backgroundImage:`linear-gradient(rgba(245,158,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.04) 1px,transparent 1px)`, backgroundSize:'40px 40px' }} />
+        <div style={{ position:'absolute', inset:0, pointerEvents:'none', backgroundImage:`radial-gradient(rgba(245,158,11,0.12) 1px, transparent 1px)`, backgroundSize:'28px 28px' }} />
         <div style={{ position:'absolute', bottom:'10%', left:'5%', width:360, height:360, background:'radial-gradient(circle,rgba(245,158,11,.08) 0%,transparent 70%)', borderRadius:'50%', filter:'blur(50px)', pointerEvents:'none' }} />
 
         <div style={{ maxWidth:980, margin:'0 auto', position:'relative', zIndex:1 }}>
           <div style={{ textAlign:'center', marginBottom:56 }}>
             <span style={{ display:'inline-block', fontFamily:"'Space Mono',monospace", fontSize:'.73rem', color:'#f59e0b', letterSpacing:'.16em', textTransform:'uppercase', marginBottom:12 }}>
-              // my_projects
+              
             </span>
             <h2 style={{ fontFamily:"'Space Mono',monospace", fontSize:'clamp(1.7rem,4vw,2.8rem)', fontWeight:700, color:'#f1f5f9', marginBottom:16 }}>
-              Projelerim <span style={{ color:'#f59e0b' }}>_</span>
+              Projelerim <span style={{ color:'#f59e0b' }}></span>
             </h2>
             <p style={{ color:'#8899b0', fontSize:'.97rem', maxWidth:480, margin:'0 auto' }}>
               Gerçek üretim ortamlarında geliştirdiğim ve katkı sağladığım projeler.
