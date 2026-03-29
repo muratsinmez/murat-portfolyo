@@ -10,8 +10,8 @@ function App() {
     <div className="dark bg-slate-900 min-h-screen font-sans">
       <Navbar />
       <Hero />
-      <Projects />
       <About />
+      <Projects />
       <Contact />
     </div>
   );

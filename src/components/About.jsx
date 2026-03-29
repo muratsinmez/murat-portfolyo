@@ -4,16 +4,16 @@ const About = () => {
   const [activeTab, setActiveTab] = useState('skills');
 
   const skillGroups = [
-    { category:'Programming & Backend', color:'#38bdf8', icon:'⚙️', skills:['Java 17+','Spring Boot 3','Python','FastAPI','RESTful API','Microservices','React'] },
-    { category:'AI & Automation',       color:'#34d399', icon:'🤖', skills:['OpenAI API','Prompt Engineering','LLM Implementation','AI Integration'] },
-    { category:'Database & Tools',      color:'#a78bfa', icon:'🗄️', skills:['MySQL','PostgreSQL','Supabase','Git','Linux','Windows Server'] },
-    { category:'Support & Ops',         color:'#fb923c', icon:'🛠️', skills:['Troubleshooting','System Performance Monitoring','IT Infrastructure','L2/L3 Support'] },
+    { category:'Programming & Backend', color:'#f59e0b', icon:'⚙️', skills:['Java 17+','Spring Boot 3','Python','FastAPI','RESTful API','Microservices','React'] },
+    { category:'AI & Automation',       color:'#fb923c', icon:'🤖', skills:['OpenAI API','Prompt Engineering','LLM Implementation','AI Integration'] },
+    { category:'Database & Tools',      color:'#fbbf24', icon:'🗄️', skills:['MySQL','PostgreSQL','Supabase','Git','Linux','Windows Server'] },
+    { category:'Support & Ops',         color:'#f97316', icon:'🛠️', skills:['Troubleshooting','System Performance Monitoring','IT Infrastructure','L2/L3 Support'] },
   ];
 
   const experience = [
     {
       role:'Yazılım Lideri & Uygulama Destek Sorumlusu', company:'Hukukmatik Yazılım',
-      period:'02/2026 – Günümüz', type:'Uzaktan', color:'#38bdf8',
+      period:'02/2026 – Günümüz', type:'Uzaktan', color:'#f59e0b',
       bullets:[
         'Bulut tabanlı SaaS CRM sisteminde kullanıcı entegrasyonlarını yönetiyor ve teknik hata bildirimlerini Python/React altyapısında çözümlüyorum.',
         'Multi-tenant mimari üzerinde Supabase (PostgreSQL) ile veritabanı yönetimi ve güvenli kimlik doğrulama süreçlerini yürütüyorum.',
@@ -21,7 +21,7 @@ const About = () => {
     },
     {
       role:'IT & Yazılım Destek Uzmanı', company:'Akay Lokman Hekim Hastanesi',
-      period:'01/2024 – 03/2025', type:'Ankara', color:'#34d399',
+      period:'01/2024 – 03/2025', type:'Ankara', color:'#fb923c',
       bullets:[
         'Hastane donanım ve yazılım altyapı izleme süreçlerinde hata tespit süresini %50 hızlandırdım.',
         'Kritik sistem hatalarına ilk müdahaleyi yaparak operasyonel kesintileri minimuma indirdim.',
@@ -29,7 +29,7 @@ const About = () => {
     },
     {
       role:'Sistem Destek & Backend Developer', company:'Mamak Belediyesi',
-      period:'08/2021 – 01/2024', type:'Ankara', color:'#a78bfa',
+      period:'08/2021 – 01/2024', type:'Ankara', color:'#fbbf24',
       bullets:[
         'Sistem loglarını ve performansını izleyerek kesintileri sıfıra indirdim ve veri erişim hızını %40 artırdım.',
         'Monolitik yapının modern Microservices mimarisine taşınma süreçlerinde teknik destek sağladım.',
@@ -38,9 +38,9 @@ const About = () => {
   ];
 
   const education = [
-    { school:'Sinop Üniversitesi',           dept:'Bilgisayar Mühendisliği (Uzaktan)',         period:'2025 – Devam Ediyor', status:'Devam Ediyor', color:'#38bdf8' },
-    { school:'Atatürk Üniversitesi',          dept:'Bilgisayar Programcılığı (Önlisans)',        period:'2022 – 2025',         status:'Mezun',        color:'#34d399' },
-    { school:'Sağlık Bilimleri Üniversitesi', dept:'Sağlık Kurumları İşletmeciliği (Önlisans)', period:'2019 – 2021',         status:'Mezun',        color:'#a78bfa' },
+    { school:'Sinop Üniversitesi',           dept:'Bilgisayar Mühendisliği (Uzaktan)',         period:'2025 – Devam Ediyor', status:'Devam Ediyor', color:'#f59e0b' },
+    { school:'Atatürk Üniversitesi',          dept:'Bilgisayar Programcılığı (Önlisans)',        period:'2022 – 2025',         status:'Mezun',        color:'#fb923c' },
+    { school:'Sağlık Bilimleri Üniversitesi', dept:'Sağlık Kurumları İşletmeciliği (Önlisans)', period:'2019 – 2021',         status:'Mezun',        color:'#fbbf24' },
   ];
 
   const tabs = ['skills','experience','education'];
@@ -51,44 +51,55 @@ const About = () => {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
         @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
-
-        .skill-tag  { transition:transform .2s,border-color .2s; cursor:default; }
+        .skill-tag  { transition:transform .2s; cursor:default; }
         .skill-tag:hover  { transform:translateY(-2px); }
         .exp-card   { transition:border-color .3s,background .3s; }
-        .exp-card:hover   { border-color:rgba(56,189,248,.3)!important; background:rgba(15,23,42,.95)!important; }
+        .exp-card:hover   { background:rgba(13,27,53,0.8)!important; }
         .tab-btn    { transition:all .2s ease; cursor:pointer; font-family:'DM Sans',sans-serif; }
-        .tab-btn:hover    { color:#e2e8f0!important; }
+        .tab-btn:hover    { color:#f59e0b!important; }
 
-        /* Skills grid: 2 col desktop, 1 col mobile */
-        .skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+        .skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
         @media(max-width:640px){
-          .skills-grid { grid-template-columns:1fr!important; }
-          .about-section { padding:80px 16px!important; }
-          .tab-row { gap:6px!important; }
-          .tab-btn { padding:9px 16px!important; font-size:.82rem!important; }
-          .exp-header { flex-direction:column!important; gap:6px!important; }
-          .exp-meta { text-align:left!important; }
-          .edu-card { flex-wrap:wrap!important; }
-          .edu-meta { text-align:left!important; }
+          .skills-grid  { grid-template-columns:1fr!important; }
+          .about-section{ padding:100px 16px 110px!important; }
+          .tab-row      { gap:6px!important; }
+          .tab-btn      { padding:8px 14px!important; font-size:.8rem!important; }
+          .exp-header   { flex-direction:column!important; }
+          .exp-meta     { text-align:left!important; }
+          .edu-card     { flex-wrap:wrap!important; }
+          .edu-meta     { text-align:left!important; }
         }
       `}</style>
 
+      {/* Amber dark bg section with diagonal top & bottom */}
       <section id="about" className="about-section" style={{
-        background:'linear-gradient(180deg,#060d1a 0%,#0a1628 100%)',
-        color:'#f1f5f9', padding:'110px 24px',
+        background:'#12100a',
+        color:'#f1f5f9', padding:'110px 24px 120px',
         fontFamily:"'DM Sans',sans-serif",
+        clipPath:'polygon(0 0, 100% 60px, 100% 100%, 0 calc(100% - 60px))',
+        marginBottom:'-60px', marginTop:'-1px',
+        position:'relative', zIndex:1,
       }}>
-        <div style={{ maxWidth:920, margin:'0 auto' }}>
+        {/* subtle amber grid */}
+        <div style={{
+          position:'absolute', inset:0, pointerEvents:'none',
+          backgroundImage:`linear-gradient(rgba(245,158,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.04) 1px,transparent 1px)`,
+          backgroundSize:'40px 40px',
+        }} />
+        {/* glow */}
+        <div style={{ position:'absolute', top:'20%', right:'10%', width:350, height:350, background:'radial-gradient(circle,rgba(245,158,11,.08) 0%,transparent 70%)', borderRadius:'50%', filter:'blur(50px)', pointerEvents:'none' }} />
+
+        <div style={{ maxWidth:920, margin:'0 auto', position:'relative', zIndex:1 }}>
 
           {/* Header */}
           <div style={{ textAlign:'center', marginBottom:56 }}>
-            <span style={{ display:'inline-block', fontFamily:"'Space Mono',monospace", fontSize:'.73rem', color:'#38bdf8', letterSpacing:'.16em', textTransform:'uppercase', marginBottom:12 }}>
+            <span style={{ display:'inline-block', fontFamily:"'Space Mono',monospace", fontSize:'.73rem', color:'#f59e0b', letterSpacing:'.16em', textTransform:'uppercase', marginBottom:12 }}>
               // about.me
             </span>
-            <h2 style={{ fontFamily:"'Space Mono',monospace", fontSize:'clamp(1.7rem,4vw,2.8rem)', fontWeight:700, background:'linear-gradient(135deg,#f1f5f9,#94a3b8)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', marginBottom:18 }}>
-              Hakkımda
+            <h2 style={{ fontFamily:"'Space Mono',monospace", fontSize:'clamp(1.7rem,4vw,2.8rem)', fontWeight:700, color:'#f1f5f9', marginBottom:18 }}>
+              Hakkımda <span style={{ color:'#f59e0b' }}>_</span>
             </h2>
-            <p style={{ color:'#64748b', fontSize:'1rem', maxWidth:580, margin:'0 auto', lineHeight:1.8 }}>
+            <p style={{ color:'#a89278', fontSize:'1rem', maxWidth:580, margin:'0 auto', lineHeight:1.8 }}>
               5 yılı aşkın sistem altyapı ve operasyonel deneyimimi modern yazılım mimarileriyle birleştiren bir Full Stack Developer'ım.
               Teknik ekipler ile son kullanıcı arasında köprü kurarak operasyonel süreçleri hızlandırırım.
             </p>
@@ -98,11 +109,12 @@ const About = () => {
           <div className="tab-row" style={{ display:'flex', justifyContent:'center', gap:8, marginBottom:44, flexWrap:'wrap' }}>
             {tabs.map(tab => (
               <button key={tab} className="tab-btn" onClick={() => setActiveTab(tab)} style={{
-                padding:'10px 24px', borderRadius:8, border:'1px solid',
-                borderColor: activeTab===tab ? 'rgba(56,189,248,.5)' : 'rgba(255,255,255,.07)',
-                background:  activeTab===tab ? 'rgba(56,189,248,.12)' : 'transparent',
-                color:       activeTab===tab ? '#38bdf8' : '#64748b',
-                fontWeight:600, fontSize:'.88rem',
+                padding:'10px 24px', borderRadius:0, border:'1px solid',
+                borderColor: activeTab===tab ? '#f59e0b' : 'rgba(245,158,11,.2)',
+                background:  activeTab===tab ? '#f59e0b' : 'transparent',
+                color:       activeTab===tab ? '#0d1b35' : '#a89278',
+                fontWeight:700, fontSize:'.88rem',
+                borderBottom: activeTab===tab ? 'none' : '1px solid rgba(245,158,11,.2)',
               }}>{tabLabels[tab]}</button>
             ))}
           </div>
@@ -111,30 +123,30 @@ const About = () => {
           {activeTab==='skills' && (
             <div className="skills-grid" style={{ animation:'fadeUp .4s ease' }}>
               {skillGroups.map((g,i) => (
-                <div key={i} style={{ padding:22, borderRadius:16, background:'rgba(15,23,42,.7)', border:'1px solid rgba(255,255,255,.06)' }}>
+                <div key={i} style={{ padding:22, borderRadius:0, background:'rgba(13,27,53,.5)', borderLeft:`3px solid ${g.color}`, border:`1px solid rgba(245,158,11,.15)`, borderLeftWidth:3 }}>
                   <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
                     <span style={{ fontSize:'1.15rem' }}>{g.icon}</span>
-                    <h3 style={{ color:g.color, fontWeight:600, fontSize:'.86rem', letterSpacing:'.02em' }}>{g.category}</h3>
+                    <h3 style={{ color:g.color, fontWeight:700, fontSize:'.86rem', letterSpacing:'.05em', textTransform:'uppercase' }}>{g.category}</h3>
                   </div>
                   <div style={{ display:'flex', flexWrap:'wrap', gap:7 }}>
                     {g.skills.map((s,j) => (
-                      <span key={j} className="skill-tag" style={{ padding:'5px 11px', borderRadius:6, fontSize:'.78rem', fontWeight:500, color:g.color, background:`${g.color}14`, border:`1px solid ${g.color}28` }}>{s}</span>
+                      <span key={j} className="skill-tag" style={{ padding:'5px 11px', borderRadius:0, fontSize:'.78rem', fontWeight:600, color:g.color, background:`${g.color}18`, border:`1px solid ${g.color}40` }}>{s}</span>
                     ))}
                   </div>
                 </div>
               ))}
-              {/* Certificate */}
-              <div style={{ padding:22, borderRadius:16, background:'rgba(15,23,42,.7)', border:'1px solid rgba(251,146,60,.2)', display:'flex', alignItems:'flex-start', gap:16 }}>
+              {/* Certs */}
+              <div style={{ padding:22, borderRadius:0, background:'rgba(13,27,53,.5)', border:'1px solid rgba(245,158,11,.2)', borderLeft:'3px solid #f59e0b', display:'flex', alignItems:'flex-start', gap:16 }}>
                 <span style={{ fontSize:'1.8rem' }}>🏆</span>
                 <div>
-                  <div style={{ color:'#fb923c', fontWeight:700, fontSize:'.78rem', marginBottom:8 }}>SERTİFİKALAR</div>
-                  {[['Java Programlama','BTK Akademi'],['İleri Seviye Java','BTK Akademi'],['Python','BTK Akademi']].map(([name,inst],i)=>(
-                    <div key={i} style={{ marginBottom:8 }}>
-                      <div style={{ color:'#e2e8f0', fontWeight:600, fontSize:'.88rem' }}>{name}</div>
-                      <div style={{ color:'#64748b', fontSize:'.78rem' }}>{inst}</div>
+                  <div style={{ color:'#f59e0b', fontWeight:700, fontSize:'.78rem', marginBottom:10, letterSpacing:'.08em' }}>SERTİFİKALAR</div>
+                  {[['Java Programlama','BTK Akademi'],['İleri Seviye Java','BTK Akademi'],['Python','BTK Akademi']].map(([n,i])=>(
+                    <div key={n} style={{ marginBottom:8 }}>
+                      <div style={{ color:'#f1f5f9', fontWeight:600, fontSize:'.88rem' }}>{n}</div>
+                      <div style={{ color:'#a89278', fontSize:'.78rem' }}>{i}</div>
                     </div>
                   ))}
-                  <div style={{ marginTop:4, color:'#94a3b8', fontSize:'.82rem' }}>İngilizce — B1</div>
+                  <div style={{ marginTop:6, color:'#a89278', fontSize:'.82rem' }}>İngilizce — B1</div>
                 </div>
               </div>
             </div>
@@ -142,22 +154,22 @@ const About = () => {
 
           {/* EXPERIENCE */}
           {activeTab==='experience' && (
-            <div style={{ display:'flex', flexDirection:'column', gap:16, animation:'fadeUp .4s ease' }}>
+            <div style={{ display:'flex', flexDirection:'column', gap:14, animation:'fadeUp .4s ease' }}>
               {experience.map((exp,i) => (
-                <div key={i} className="exp-card" style={{ padding:'24px 22px', borderRadius:16, background:'rgba(15,23,42,.6)', border:'1px solid rgba(255,255,255,.06)', borderLeft:`3px solid ${exp.color}` }}>
+                <div key={i} className="exp-card" style={{ padding:'24px 22px', borderRadius:0, background:'rgba(13,27,53,.4)', border:'1px solid rgba(245,158,11,.15)', borderLeft:`3px solid ${exp.color}` }}>
                   <div className="exp-header" style={{ display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:12 }}>
                     <div>
                       <h3 style={{ color:'#f1f5f9', fontWeight:700, fontSize:'.97rem', marginBottom:4 }}>{exp.role}</h3>
-                      <span style={{ color:exp.color, fontWeight:600, fontSize:'.86rem' }}>{exp.company}</span>
+                      <span style={{ color:exp.color, fontWeight:700, fontSize:'.86rem' }}>{exp.company}</span>
                     </div>
                     <div className="exp-meta" style={{ textAlign:'right' }}>
-                      <div style={{ color:'#64748b', fontSize:'.78rem', fontFamily:"'Space Mono',monospace" }}>{exp.period}</div>
-                      <span style={{ display:'inline-block', marginTop:5, padding:'2px 10px', borderRadius:999, background:`${exp.color}18`, color:exp.color, fontSize:'.7rem', fontWeight:600 }}>{exp.type}</span>
+                      <div style={{ color:'#a89278', fontSize:'.78rem', fontFamily:"'Space Mono',monospace" }}>{exp.period}</div>
+                      <span style={{ display:'inline-block', marginTop:5, padding:'2px 10px', background:`${exp.color}22`, color:exp.color, fontSize:'.7rem', fontWeight:700, border:`1px solid ${exp.color}50` }}>{exp.type}</span>
                     </div>
                   </div>
                   <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:8 }}>
                     {exp.bullets.map((b,j) => (
-                      <li key={j} style={{ display:'flex', gap:10, color:'#94a3b8', fontSize:'.86rem', lineHeight:1.65 }}>
+                      <li key={j} style={{ display:'flex', gap:10, color:'#c4b49a', fontSize:'.86rem', lineHeight:1.65 }}>
                         <span style={{ color:exp.color, flexShrink:0 }}>▸</span>{b}
                       </li>
                     ))}
@@ -169,23 +181,22 @@ const About = () => {
 
           {/* EDUCATION */}
           {activeTab==='education' && (
-            <div style={{ display:'flex', flexDirection:'column', gap:14, animation:'fadeUp .4s ease' }}>
+            <div style={{ display:'flex', flexDirection:'column', gap:12, animation:'fadeUp .4s ease' }}>
               {education.map((edu,i) => (
-                <div key={i} className="edu-card" style={{ padding:'20px 22px', borderRadius:16, background:'rgba(15,23,42,.6)', border:'1px solid rgba(255,255,255,.06)', borderLeft:`3px solid ${edu.color}`, display:'flex', alignItems:'center', gap:16, flexWrap:'wrap' }}>
-                  <div style={{ width:44, height:44, borderRadius:12, flexShrink:0, background:`${edu.color}18`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:'1.25rem' }}>🎓</div>
+                <div key={i} className="edu-card" style={{ padding:'20px 22px', borderRadius:0, background:'rgba(13,27,53,.4)', border:'1px solid rgba(245,158,11,.15)', borderLeft:`3px solid ${edu.color}`, display:'flex', alignItems:'center', gap:16, flexWrap:'wrap' }}>
+                  <div style={{ width:44, height:44, borderRadius:0, flexShrink:0, background:`${edu.color}18`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:'1.25rem' }}>🎓</div>
                   <div style={{ flex:1, minWidth:160 }}>
                     <h3 style={{ color:'#f1f5f9', fontWeight:700, fontSize:'.93rem' }}>{edu.school}</h3>
-                    <p style={{ color:'#94a3b8', fontSize:'.83rem', marginTop:3 }}>{edu.dept}</p>
+                    <p style={{ color:'#a89278', fontSize:'.83rem', marginTop:3 }}>{edu.dept}</p>
                   </div>
                   <div className="edu-meta" style={{ textAlign:'right' }}>
-                    <div style={{ color:'#64748b', fontSize:'.76rem', fontFamily:"'Space Mono',monospace" }}>{edu.period}</div>
-                    <span style={{ display:'inline-block', marginTop:5, padding:'2px 10px', borderRadius:999, background:`${edu.color}18`, color:edu.color, fontSize:'.7rem', fontWeight:600 }}>{edu.status}</span>
+                    <div style={{ color:'#a89278', fontSize:'.76rem', fontFamily:"'Space Mono',monospace" }}>{edu.period}</div>
+                    <span style={{ display:'inline-block', marginTop:5, padding:'2px 10px', background:`${edu.color}22`, color:edu.color, fontSize:'.7rem', fontWeight:700 }}>{edu.status}</span>
                   </div>
                 </div>
               ))}
             </div>
           )}
-
         </div>
       </section>
     </>
