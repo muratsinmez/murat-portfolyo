@@ -81,7 +81,7 @@ const Projects = () => {
       metrics:['Production Level','Amiral Gemisi Proje'], link:'#',
     },
     {
-      title:'Çorba Plus', subtitle:'E-İmza Otomasyon & Çoklayıcı Mimarisi',
+      title:'Kod Adı; Çorba Plus', subtitle:'E-İmza Otomasyon & Çoklayıcı Mimarisi',
       description:(
         <ul style={{ listStyleType:'disc', paddingLeft:'1.1rem', display:'flex', flexDirection:'column', gap:6 }}>
           <li><strong style={{color:'#fb923c'}}>Otonom Çoklu İmza Motoru:</strong> Yüzlerce evrakı tek PIN onayıyla imzalayan batch-processing altyapısı.</li>
