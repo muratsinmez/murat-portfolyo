@@ -117,10 +117,10 @@ const About = () => {
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <span style={{ display: 'inline-block', fontFamily: "'Space Mono',monospace", fontSize: '.73rem', color: '#f59e0b', letterSpacing: '.16em', textTransform: 'uppercase', marginBottom: 12 }}>
-              // about.me
+              
             </span>
             <h2 style={{ fontFamily: "'Space Mono',monospace", fontSize: 'clamp(1.7rem,4vw,2.8rem)', fontWeight: 700, color: '#f1f5f9', marginBottom: 18 }}>
-              Hakkımda <span style={{ color: '#f59e0b' }}>_</span>
+              Hakkımda <span style={{ color: '#f59e0b' }}></span>
             </h2>
             <p style={{ color: '#a89278', fontSize: '1rem', maxWidth: 580, margin: '0 auto', lineHeight: 1.8 }}>
               5 yılı aşkın sistem altyapı ve operasyonel deneyimimi modern yazılım mimarileriyle birleştiren bir Full Stack Developer'ım.

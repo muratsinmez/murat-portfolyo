@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contact = () => {
-  const [form, setForm] = useState({ name:'', email:'', message:'' });
-  const [sent, setSent] = useState(false);
-
-  const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleSubmit = e => {
-    e.preventDefault();
-    const body = encodeURIComponent(`Ad: ${form.name}\nEmail: ${form.email}\n\nMesaj:\n${form.message}`);
-    window.open(`mailto:muratsinmez06@gmail.com?subject=Portfolyö İletişim - ${form.name}&body=${body}`);
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-  };
-
   const contactInfo = [
     { icon:'📧', label:'E-posta', value:'muratsinmez06@gmail.com', href:'mailto:muratsinmez06@gmail.com', color:'#f59e0b' },
-    { icon:'📱', label:'Telefon', value:'0501 504 60 20',           href:'tel:+905015046020',              color:'#fb923c' },
-    { icon:'📍', label:'Konum',   value:'Ankara, Türkiye',           href:null,                             color:'#fbbf24' },
+    { icon:'📱', label:'Telefon', value:'0501 504 60 20',          href:'tel:+905015046020',              color:'#fb923c' },
+    { icon:'📍', label:'Konum',   value:'Ankara, Türkiye',         href:null,                             color:'#fbbf24' },
   ];
 
   const socials = [
@@ -30,28 +18,16 @@ const Contact = () => {
     },
   ];
 
-  const inputStyle = {
-    width:'100%', boxSizing:'border-box', padding:'12px 15px',
-    background:'rgba(13,27,53,.6)', border:'1px solid rgba(245,158,11,.25)',
-    color:'#f1f5f9', fontSize:'.93rem', fontFamily:"'DM Sans',sans-serif",
-    outline:'none', transition:'border-color .25s', borderRadius:0,
-  };
-
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
         @keyframes fadeUp    { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
-        @keyframes successPop{ 0%{transform:scale(.85);opacity:0} 60%{transform:scale(1.04)} 100%{transform:scale(1);opacity:1} }
-        .c-input:focus { border-color:#f59e0b!important; }
         .info-row:hover { border-color:rgba(245,158,11,.4)!important; }
         .social-a { transition:all .25s ease; }
         .social-a:hover { transform:translateY(-3px); border-color:rgba(245,158,11,.5)!important; background:rgba(245,158,11,.1)!important; }
-        .send-btn { transition:opacity .2s,transform .2s,box-shadow .2s; }
-        .send-btn:hover { opacity:.9; transform:translateY(-2px); box-shadow:4px 4px 0 #c47d08!important; }
-        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start; }
+        .contact-grid { display:grid; grid-template-columns:1fr; max-width: 500px; margin: 0 auto; gap:36px; align-items:start; }
         @media(max-width:680px){
-          .contact-grid    { grid-template-columns:1fr!important; gap:28px!important; }
           .contact-section { padding:100px 16px 60px!important; }
           .social-row      { flex-wrap:wrap!important; }
         }
@@ -78,13 +54,11 @@ const Contact = () => {
               İletişime Geç <span style={{ color:'#f59e0b' }}></span>
             </h2>
             <p style={{ color:'#a89278', fontSize:'.97rem', maxWidth:460, margin:'0 auto' }}>
-              Yeni fırsatlar için her zaman açığım. Mesajınızı bırakın, en kısa sürede dönüş yapayım.
+              Yeni fırsatlar için her zaman açığım. İletişim bilgilerimden bana ulaşabilirsiniz.
             </p>
           </div>
 
           <div className="contact-grid">
-
-            {/* Left */}
             <div style={{ animation:'fadeUp .5s ease' }}>
               <p style={{ color:'#f59e0b', fontSize:'.78rem', fontWeight:700, letterSpacing:'.12em', textTransform:'uppercase', marginBottom:18 }}>İletişim Bilgileri</p>
               <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:32 }}>
@@ -111,42 +85,6 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-            </div>
-
-            {/* Right: form */}
-            <div style={{ animation:'fadeUp .5s .15s ease both' }}>
-              <form onSubmit={handleSubmit} style={{ background:'rgba(13,27,53,.5)', border:'1px solid rgba(245,158,11,.2)', borderTop:'3px solid #f59e0b', padding:28 }}>
-                {sent && (
-                  <div style={{ padding:'11px 16px', marginBottom:20, background:'rgba(245,158,11,.12)', border:'1px solid rgba(245,158,11,.4)', color:'#f59e0b', fontWeight:700, textAlign:'center', animation:'successPop .3s ease' }}>
-                    ✓ Mail uygulamanız açıldı!
-                  </div>
-                )}
-
-                {[
-                  { name:'name',  label:'Adınız',  type:'text',  placeholder:'Adınız Soyadınız' },
-                  { name:'email', label:'E-posta', type:'email', placeholder:'ornek@mail.com'    },
-                ].map(f => (
-                  <div key={f.name} style={{ marginBottom:16 }}>
-                    <label style={{ display:'block', color:'#a89278', fontSize:'.75rem', fontWeight:700, marginBottom:7, textTransform:'uppercase', letterSpacing:'.08em' }}>{f.label}</label>
-                    <input type={f.type} name={f.name} value={form[f.name]} onChange={handleChange} placeholder={f.placeholder} required className="c-input" style={inputStyle} />
-                  </div>
-                ))}
-
-                <div style={{ marginBottom:20 }}>
-                  <label style={{ display:'block', color:'#a89278', fontSize:'.75rem', fontWeight:700, marginBottom:7, textTransform:'uppercase', letterSpacing:'.08em' }}>Mesajınız</label>
-                  <textarea name="message" value={form.message} onChange={handleChange} rows={5} required className="c-input"
-                    placeholder="Merhaba Murat, seninle iletişime geçmek istiyorum..."
-                    style={{ ...inputStyle, resize:'vertical' }} />
-                </div>
-
-                <button type="submit" className="send-btn" style={{
-                  width:'100%', padding:'13px', border:'none',
-                  background:'#f59e0b', color:'#0d1b35',
-                  fontWeight:700, fontSize:'.95rem', cursor:'pointer',
-                  fontFamily:"'DM Sans',sans-serif",
-                  boxShadow:'4px 4px 0 #c47d08',
-                }}>Mesaj Gönder →</button>
-              </form>
             </div>
           </div>
 
